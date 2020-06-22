@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2>SVue</h2>
+      <p>{{title}}</p>
+      <p>{{autor.first.name}}</p>
+      <p>{{autor.first.age}}</p>
+      <p>{{autor.first.sex}}</p>
+      <p s-text="title"></p>  
+    </div>
+
+    <script src="./plugin/SVue.js"></script>
+    <script src="./plugin/compile.js"></script>
+    <script>
+      const vue =  new Vue({
+        el: "#app",
+        data: {
+           title: '手写VUE',
+           autor: {
+             first: {
+               name: 'ws',
+               age: 8,
+               sex: 'male'
+             }
+           }
+         }
+       })
+    </script>
+  </body>
+</html>
